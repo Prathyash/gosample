@@ -1,0 +1,18 @@
+pipeline:
+  name: Pipeline2
+  identifier: Pipeline2
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - name: BuildStage
+      steps:
+        - step:
+            type: Run
+            identifier: build_go_app
+            name: Build Go App
+            spec:
+              command: |-
+                echo "Welcome to Harness CI"
+                go build
+                go test
